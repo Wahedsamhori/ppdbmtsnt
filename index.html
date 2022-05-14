@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/index.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- nav dimulai -->
+    <nav class="teal accent-4">
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" class="brand-logo">PPDB</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="sass.html">Pendaftaran</a></li>
+                  <li><a href="badges.html">Login Akun</a></li>
+                  <li><a href="collapsible.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <!-- nav akhir -->
+      <!-- hero awal -->
+      <div class="hero">
+          <div class="container">
+          <div class="row">
+              <div class="col l6 hero-text" >
+                  <h5>DIBUKA PENDAFTARAN</h5>
+                  <p>Peserta Didik Baru MTs Nurut Taqwa Cermee Bondowoso <br>Tahun Ajaran 2022-2023.</p>
+                  <a href="" class="btn teal accent-4">Daftar Sekarang</a>
+              </div>
+              <div class="col l6 hero-image">
+                  <img src="img/murid.png" alt="" class="responsive-img">
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- hero akhir -->
+      <!-- Menu hero awal -->
+      <div class="menu-hero z-depth-1">
+        <div class="container x1" >
+            <div class="row">
+                <div class="col l4">
+                    <div class="center">
+                        <img src="img/sign.png" alt="" class="responsive-img">
+                        
+                    </div>
+                </div>
+                <div class="col l4">
+                    <div class="center">
+                        <img src="img/login.png" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="col l4">
+                    <div class="center">
+                        <img src="img/promosi.png" alt="" class="responsive-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col l4">
+                    <div class="center">
+                        <a href="#daftar" class="btn modal-trigger">BUAT AKUN</a>
+                    </div>
+                </div>
+                <div class="col l4">
+                    <div class="center">
+                        <a href="#login" class="btn modal-trigger">LOGIN AKUN</a>
+                    </div>
+                </div>
+                <div class="col l4">
+                    <div class="center">
+                        <a href="" class="btn">BROSUR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Menu hero akhir -->
+      <div class="contact">
+          <div class="row">
+              <div class="container">
+                  <div class="row">
+                      <div class="col l12">
+                          <div class="center">
+                              <img src="img/wa.png" alt="" width="50">
+                              <h5>Hubungi Kami</h5>
+                              <h6>085230689383</h6>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- footer awal -->
+      <footer class="page-footer teal accent-4">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">PPDB MTs NURUT TAQWA</h5>
+              <p class="grey-text text-lighten-4">Tahun Pelajaran 2022-2023.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container center">
+          © 2022 ppdb mts nurut taqwa
+          </div>
+        </div>
+      </footer>
+      <!-- footer akhir -->
+      <!-- modal daftar -->
+      <div id="daftar" class="modal">
+        <form action="http://localhost/ppdbmtsnt/?page=daftar" method="post">
+        <div class="modal-content">
+            <h5>Daftar</h5>
+              <div class="input-field">
+                  <label for="">Nama</label>
+                  <input type="text" name="nama" id="">
+              </div>
+              <div class="input-field">
+                  <label for="">No.Handphone</label>
+                  <input type="text" name="nohp" id="">
+              </div>
+              <div class="input-field">
+                <label for=""> Buat Password</label>
+                <input type="password" name="password" id="">
+            </div>
+            <div class="input-field">
+                <label for=""> Ulangi Password</label>
+                <input type="password" name="confirm_password" id="">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" name="register" value="buat akun" class="modal-close waves-effect waves-green btn"/>
+        </div>
+      </form>
+      </div>
+      <!-- modal daftar akhir -->
+      <!-- Modal Login -->
+      <div id="login" class="modal">
+        <form action="/?page=login" method="post">
+          <div class="modal-content">
+            <h5>Login</h5>
+              <div class="input-field">
+                  <label for="">No.Handphone</label>
+                  <input type="text" name="nohp" id="">
+              </div>
+              <div class="input-field">
+                <label for="">Password</label>
+                <input type="password" name="password" id="">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" name="login" class="modal-close waves-effect waves-green btn" value="Login" />
+        </div>
+      </form>
+    </div>
+      <script >
+      document.addEventListener('DOMContentLoaded', function() {
+        M.AutoInit();
+      });
+      
+      </script>
+</body>
+</html>

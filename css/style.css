@@ -1,0 +1,31 @@
+.hero{
+    height : 400px;
+}
+.hero-text{
+    margin-top: 80px;
+}
+.hero-image{
+    margin-top: 20px;
+}
+.menu-hero{
+    background-color: #64ffda;
+}
+.menu-hero i {
+    font-size: 50px;
+    margin-top: 12px;
+    
+}
+.menu-hero img {
+    padding: 5px;
+}
+.icon-box {
+    height: 80px;
+    width: 80px;
+}
+.x1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.contact img{
+    margin-top: 20px;
+}

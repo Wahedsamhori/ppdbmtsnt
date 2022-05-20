@@ -50,22 +50,38 @@
                <?php foreach ($metadatapengguna as $key => $value): ?>
                     <?php foreach ($keterangan as $key1 => $value1): ?>
                          <?php if ($key == $key1): ?>
-                    <div class="input-field">
-                         <label for=""><?php echo $value1; ?></label>
-                         <input type="text" name="<?php echo $key; ?>">
-                    </div>
-                    <?php endif; ?>
+                              <?php if ( $key == "jk" ) : /* jika kunci adalah jk */?>
+                                   <div class="input-field">
+                                        <select>
+                                             <option value="" disabled selected>Pilih jenis kelamin</option>
+                                             <option value="1">Laki-laki</option>
+                                             <option value="2">Perempuan</option>
+                                        </select>
+                                        <label>Jenis Kelamin</label>
+                                   </div>
+                              <?php elseif ( $key == "tgl_lahir") : ?>
+                                   <div class="input-field">
+                                        <input type="text" class="datepicker" placeholder="Tanggal lahir">
+                                   </div>
+                                   <?php elseif ( $key == "agama") : ?>
+                                   <div class="input-field">
+                                        <select>
+                                             <option value="" disabled selected>Pilih agama</option>
+                                             <option value="1">Islam</option>
+                                             <option value="2">Buddha</option>
+                                             <!-- dan seterusnya -->
+                                        </select>
+                                        <label>Jenis Keyakinan</label>
+                                   </div>
+                              <?php else : ?>
+                                   <div class="input-field">
+                                        <label for=""><?php echo $value1; ?></label>
+                                        <input type="text" name="<?php echo $key; ?>">
+                                   </div>
+                              <?php endif; ?>
+                         <?php endif; ?>
+                    <?php endforeach; ?>
                <?php endforeach; ?>
-               <?php endforeach; ?>
-               
-               <div class="input-field">
-               <select>
-                    <option value="" disabled selected>Pilih jenis kelamin</option>
-                    <option value="1">Laki-laki</option>
-                    <option value="2">Perempuan</option>
-               </select>
-               <label>Jenis Kelamin</label>
-               </div>
                <div class="input-field">
                     <div class="right">
                          <button type="submit" class="btn" name="simpan">SIMPAN</button>

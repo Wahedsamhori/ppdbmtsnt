@@ -37,10 +37,15 @@
                     $datapassword =$stmt->fetchObject();
 
                     if (password_verify($param_obj->password, $datapassword->password)){
-                        return "loggedin";
+                        return array (
+                            "status"    => "berhasil",
+                            "user_id"   => $data -> id
+                        );
                     }
                     else {
-                        return " Cek password anda";
+                        return array (
+                            "status"    => "salahpassword"
+                        );
                     }
                 }
                 else{
@@ -90,6 +95,11 @@
                                 $stmt->bindParam(2,$password);
                                 $stmt->execute();
                                 if ($stmt){
+                                    $stmt=$this->pdo->prepare(
+                                        "INSERT into pengguna_meta (id) values (?)"
+                                    );
+                                    $stmt->bindParam(1,$id_baru);
+                                    $stmt->execute();
                                     return 'registered';
                                 }
                                 else {

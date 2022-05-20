@@ -3,14 +3,16 @@
         $pengguna->param=$_POST;
         $respon=$pengguna->pendaftaran();
         if ($respon == "registered") {
-            header("location:http://localhost/ppdbmtsnt/?page=nopage");
+            header("location:http://localhost/ppdbmtsnt/?page=login");
         }
     }
 
 ?>
 
-<form action="" method="POST">
-    <div>
+<div class="container">
+    <h5 class="mt-20">Registrasi</h5>
+    <form action="" class="mb-20" method="POST">
+    <div class="input-field">
         <input type="text" placeholder="Nama anda" name="nama">
     </div>
     <div>
@@ -24,7 +26,8 @@
     </div>
 
     <div>
-        <input type="submit" name="register" value="Buat akun">
+        <input type="submit" class="btn mb-20" name="register" value="Buat akun">
     </div>
 
 </form>
+</div>

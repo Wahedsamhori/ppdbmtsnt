@@ -1,9 +1,15 @@
-<?php 
- define("DB_NAME", "ppdbmts");
- define("DB_USER", "root");
- define("DB_PASS", "");
- define("DB_HOST", "localhost");
+<?php
+     // mencegah pengunjung mengakses file langsung
+     if(!defined("ABSPATH")) exit();
 
- define("alamat_utama", "http://localhost/ppdbmtsnt/");
+     // konstan database
+     define("DB_NAME", "ppdbmts");
+     define("DB_USER", "root");
+     define("DB_PASS", "");
+     define("DB_HOST", "localhost");
+
+     // konstan web
+
+     define("ALAMAT_UTAMA", "http://localhost/ppdbmtsnt/"); // ubah dengan URL setelah dihosting
 
 ?>

@@ -13,12 +13,18 @@
 
     spl_autoload_register("autoload");
     
-    $db = new database();
+    /**
+     * catatan //
+     * pemanggilan kelas dari /class/*.php
+     */
+
+     $db = new database();
     $pengguna = new pengguna();
     $aksi = new aksi();
     $akun = new akun ();
+    $siswa = new siswa ();
 
-    // status utama pengguna tidak login
+    // status default pengguna tidak login
     $sudahlogin = false;
 
     if (isset($_SESSION['ID'])){

@@ -1,3 +1,8 @@
+<?php 
+    // mencegah pengunjung mengakses file langsung
+    if(!defined("ABSPATH")) exit();
+?>
+
 <div class="main-content">
      <div class="ml-30" >
      <div class="row">

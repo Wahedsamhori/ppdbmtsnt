@@ -15,7 +15,7 @@
 
     if (!empty ( $_GET["page"])){
         // proteksi halaman yang bisa dikunjungi
-        $pages = ['akun','daftar','login','dashboard','ubah-akun','keluar','ubah-foto'];
+        $pages = ['akun','daftar','login','dashboard','siswa','ubah-akun','keluar','ubah-foto'];
 
         if (in_array(htmlentities($_GET['page']),$pages)){
             require "pages/".$_GET["page"] . ".php";
